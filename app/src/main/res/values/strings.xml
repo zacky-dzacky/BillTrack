@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BillTrack</string>
+    <string name="captured_image_preview">Preview of the captured image</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="upload_picture">Upload Picture</string>
+    <string name="id_card_frame_description">Overlay frame to guide ID card placement</string>
+    <string name="retake_picture">Retake</string>
+    <string name="photo_id_ocr_title">Photo ID OCR</string>
+    <string name="align_id_instruction">Align the front of your ID Above</string>
 </resources>

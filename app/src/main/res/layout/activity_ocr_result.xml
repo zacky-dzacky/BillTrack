@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".OcrResultActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCardTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card Type:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvCardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="NIK" />
+
+        <TextView
+            android:id="@+id/tvProvinceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Province:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvProvince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="DKI JAKARTA" />
+
+        <TextView
+            android:id="@+id/tvRegionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Region:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:text="JAKARTA UTARA" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Identity Information:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvNikLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIK:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvNik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="140501200940004" />
+
+        <TextView
+            android:id="@+id/tvNamaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="ZACKY DZACKY-SYARIEF" />
+
+        <TextView
+            android:id="@+id/tvTempatTanggalLahirLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempat/Tanggal Lahir:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvTempatTanggalLahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="JAKARTA, 20-02-1994" />
+
+        <TextView
+            android:id="@+id/tvJenisKelaminLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvJenisKelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="LAKI-LAKI Gok." />
+
+        <TextView
+            android:id="@+id/tvGolDarahLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gol. Darah:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvGolDarah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="-" />
+
+        <TextView
+            android:id="@+id/tvAlamatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="APARTEMEN GREEN BAY PEUTT TOWER B23 /BA" />
+
+        <TextView
+            android:id="@+id/tvRtRwLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RT/RW:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvRtRw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="664/046" />
+
+        <TextView
+            android:id="@+id/tvKelurahanDesaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelurahan/Desa:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvKelurahanDesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="PEQEE" />
+
+        <TextView
+            android:id="@+id/tvKecamatanLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kecamatan:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvKecamatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="PENJARINGAN" />
+
+        <TextView
+            android:id="@+id/tvAgamaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agama:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvAgama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="ISLAM" />
+
+        <TextView
+            android:id="@+id/tvStatusPekerjaanLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status Pekerjaan:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvStatusPekerjaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="KAWIN" />
+
+        <TextView
+            android:id="@+id/tvPekerjaanLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pekerjaan:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvPekerjaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="WIRASWASTA" />
+
+        <TextView
+            android:id="@+id/tvCitizenshipLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Citizenship:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvCitizenship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="WNI" />
+
+        <TextView
+            android:id="@+id/tvValidUntilLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valid Until:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvValidUntil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:text="SEUMURHIDUP" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photo Description:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPhotoPersonLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvPhotoPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="-" />
+
+        <TextView
+            android:id="@+id/tvPhotoStyleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Style:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvPhotoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:text="-" />
+
+        <TextView
+            android:id="@+id/tvSignatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signature:"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvSignature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="-" />
+
+    </LinearLayout>
+</ScrollView>
