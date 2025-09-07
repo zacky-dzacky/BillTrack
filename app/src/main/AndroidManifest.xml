@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BillTrack">
         <activity
-            android:name=".MainActivity"
+            android:name=".BillCaptureActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +26,13 @@
 
         <activity
             android:name=".OcrResultActivity"
-            android:exported="false" /> 
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
             <!-- Set exported to false as it's not a launcher activity 
-                 and will be started explicitly by MainActivity -->
+                 and will be started explicitly -->
 
         <provider
             android:name="androidx.core.content.FileProvider"
