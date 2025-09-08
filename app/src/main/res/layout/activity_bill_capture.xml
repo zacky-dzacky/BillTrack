@@ -128,20 +128,28 @@
     </ScrollView>
 
     <!-- Initial Capture Button -->
-    <Button
+    <LinearLayout
         android:id="@+id/capture_bill_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Capture Bill"
         android:background="@drawable/drawable_button_upload_background"
         android:textColor="@android:color/white"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="42dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="visible"/>
+        android:visibility="visible"
+        android:paddingVertical="13dp">
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CAPTURE BILL"/>
+    </LinearLayout>
 
     <!-- Buttons shown after capture -->
     <LinearLayout
@@ -151,13 +159,13 @@
         android:orientation="horizontal"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="42dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:visibility="gone">
 
-        <Button
+        <LinearLayout
             android:id="@+id/add_note_button" 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -165,17 +173,33 @@
             android:text="Add Note"
             android:background="@drawable/drawable_button_add_note_background"
             android:textColor="#8A2BE2"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            android:paddingVertical="13dp">
+            <TextView
+                android:textColor="#757575"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="ADD NOTE"/>
+        </LinearLayout>
 
-        <Button
+        <LinearLayout
             android:id="@+id/upload_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Upload"
             android:background="@drawable/drawable_button_upload_background"
             android:textColor="@android:color/white"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"
+            android:paddingVertical="13dp">
+            <TextView
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="SAVE"/>
+        </LinearLayout>
     </LinearLayout>
 
     <!-- Retake button (could be overlaid or part of the post_capture_buttons_layout if design allows) -->

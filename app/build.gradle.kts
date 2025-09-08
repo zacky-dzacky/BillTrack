@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.ksp) // Added KSP plugin
 }
 
 android {
@@ -65,6 +66,11 @@ dependencies {
 
     // ML Kit Image Labeling
     implementation(libs.mlkit.image.labeling)
+
+    // Room Persistence Library
+    implementation(libs.androidx.room.runtime) // Assuming libs.androidx.room.runtime is defined
+    implementation(libs.androidx.room.ktx)     // Assuming libs.androidx.room.ktx is defined (for Coroutines)
+    ksp(libs.androidx.room.compiler)           // Assuming libs.androidx.room.compiler is defined
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
