@@ -23,7 +23,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import com.billtrack.databinding.ActivityMainBinding
+import com.billtrack.databinding.ActivityOcrBinding
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.gson.Gson
@@ -56,7 +56,7 @@ import java.util.concurrent.TimeUnit
 class OCRActivity : AppCompatActivity() {
 
     private var textToSend: String = ""
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityOcrBinding
     private var capturedBitmap: Bitmap? = null
     private var imageCapture: ImageCapture? = null
     private lateinit var cameraExecutor: ExecutorService
@@ -98,7 +98,7 @@ class OCRActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityOcrBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         cameraExecutor = Executors.newSingleThreadExecutor()

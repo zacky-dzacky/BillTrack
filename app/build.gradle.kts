@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.ksp) // Added KSP plugin
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -42,6 +43,16 @@ android {
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+
+    // Import the BoM for the Firebase platform
+    implementation(platform(libs.firebase.bom))
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation(libs.firebase.auth)
+//    implementation("com.google.firebase:firebase-auth-ktx")
+
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
