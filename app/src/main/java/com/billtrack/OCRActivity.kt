@@ -53,7 +53,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
-class MainActivity : AppCompatActivity() {
+class OCRActivity : AppCompatActivity() {
 
     private var textToSend: String = ""
     private lateinit var binding: ActivityMainBinding
@@ -341,7 +341,7 @@ class MainActivity : AppCompatActivity() {
 
                 tempPngFile = bitmapToPngFileForUpload(bitmapToUpload, "upload_image.png")
                 if (tempPngFile == null) {
-                    Toast.makeText(this@MainActivity, "Failed to prepare image for upload (PNG conversion)", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@OCRActivity, "Failed to prepare image for upload (PNG conversion)", Toast.LENGTH_SHORT).show()
                     binding.loadingProgressBar.visibility = View.GONE
                     binding.doneButton.isEnabled = true
                     binding.retakeButton.isEnabled = true
@@ -365,25 +365,25 @@ class MainActivity : AppCompatActivity() {
                     val apiResponse = response.body()
                     val ocrData = apiResponse?.message
                     if (ocrData != null) {
-                        Toast.makeText(this@MainActivity, "Upload successful! Processing data...", Toast.LENGTH_LONG).show()
-                        val intent = Intent(this@MainActivity, OcrResultActivity::class.java).apply {
+                        Toast.makeText(this@OCRActivity, "Upload successful! Processing data...", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this@OCRActivity, OcrResultActivity::class.java).apply {
                             putExtra(OcrResultActivity.EXTRA_OCR_RESPONSE, Gson().toJson(ocrData))
                         }
                         startActivity(intent)
                     } else {
                         val errorMessage = if (apiResponse == null) "Response body is null." else "Message in response is null."
-                        Toast.makeText(this@MainActivity, "Upload successful but no data received: $errorMessage", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@OCRActivity, "Upload successful but no data received: $errorMessage", Toast.LENGTH_LONG).show()
                         Log.e(TAG, "Upload successful but no data received: $errorMessage")
                     }
                     switchToCameraView()
                 } else {
                     val errorBody = response.errorBody()?.string() ?: "Unknown error"
-                    Toast.makeText(this@MainActivity, "Upload failed: $errorBody", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@OCRActivity, "Upload failed: $errorBody", Toast.LENGTH_LONG).show()
                     Log.e(TAG, "Upload failed: $errorBody")
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Upload exception: ${e.message}", e)
-                Toast.makeText(this@MainActivity, "Upload failed: ${e.message}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@OCRActivity, "Upload failed: ${e.message}", Toast.LENGTH_LONG).show()
                 binding.loadingProgressBar.visibility = View.GONE
                 binding.doneButton.isEnabled = true
                 binding.retakeButton.isEnabled = true
