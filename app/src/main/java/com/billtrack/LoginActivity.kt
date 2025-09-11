@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private val googleSignInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == Activity.RESULT_CANCELED) {
+        if (result.resultCode == Activity.RESULT_OK) { 
             val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
             try {
                 val account = task.getResult(ApiException::class.java)
@@ -46,6 +46,10 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Google Sign-In failed: ${e.statusCode}", Toast.LENGTH_SHORT).show()
                 showProgress(false)
             }
+        } else {
+            Log.w(TAG, "Google Sign-In not successful. Result code: ${result.resultCode}")
+            Toast.makeText(this, "Google Sign-In was not completed.", Toast.LENGTH_SHORT).show()
+            showProgress(false) 
         }
     }
 
@@ -56,11 +60,8 @@ class LoginActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        // Configure Google Sign-In
-        // You must request an ID token for Firebase authentication.
-        // The default_web_client_id is generated from your google-services.json.
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("AIzaSyCNTXeJwHiDhkFSmWlp_0ASYR54Vr2xzzY")
+            .requestIdToken(getString(R.string.default_web_client_id)) // Changed to use string resource
             .requestEmail()
             .build()
 
@@ -98,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun navigateToBillCaptureActivity() {
         val intent = Intent(this, BillCaptureActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // Clear back stack
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK 
         startActivity(intent)
         finish()
     }
@@ -110,12 +111,11 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        // This is primarily handled by SplashActivity, but as a safeguard or if LoginActivity is ever entered directly:
-        if (firebaseAuth.currentUser != null) {
-           // If already logged in when LoginActivity starts, directly go to BillCaptureActivity
-           // This can happen if the user backs into LoginActivity after a successful login & navigation
-           // navigateToBillCaptureActivity() // Or just finish LoginActivity
-        }
+        // Safeguard handled by SplashActivity primarily.
+        // If LoginActivity is reached and user is already logged in, 
+        // SplashActivity should have ideally already redirected.
+        // Consider if firebaseAuth.currentUser check here is still needed or could lead to unexpected navigation
+        // if this activity is brought to foreground while already logged in.
+        // For now, keeping it minimal as SplashActivity is the main gatekeeper.
     }
 }
