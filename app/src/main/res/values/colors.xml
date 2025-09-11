@@ -8,10 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
-
     <color name="color_primary">#999999</color>
     <color name="color_primary_dark">#3C8EE0</color>
     <color name="color_accent">#4285F4</color>
     <color name="semi_transparent">#66DB1919</color>
+
+    <!-- Login Screen Colors -->
+    <color name="login_icon_background_teal">#E0F2F1</color>
+    <color name="login_icon_tint_teal">#00796B</color>
+    <color name="login_button_background_teal">#4DB6AC</color>
+    <color name="login_text_main_color">#263238</color>
+    <color name="login_text_secondary_color">#546E7A</color>
+    <color name="login_link_color">#00796B</color>
+
 </resources>

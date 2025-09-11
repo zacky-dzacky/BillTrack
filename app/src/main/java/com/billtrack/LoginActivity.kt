@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
                     showProgress(false)
                 }
             } catch (e: ApiException) {
-                Log.w(TAG, "Google Sign-In failed", e)
+                Log.w(TAG, "Google Sign-In failed ${e.message}")
                 Toast.makeText(this, "Google Sign-In failed: ${e.statusCode}", Toast.LENGTH_SHORT).show()
                 showProgress(false)
             }
@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
         // You must request an ID token for Firebase authentication.
         // The default_web_client_id is generated from your google-services.json.
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken("AIzaSyCNTXeJwHiDhkFSmWlp_0ASYR54Vr2xzzY")
             .requestEmail()
             .build()
 
