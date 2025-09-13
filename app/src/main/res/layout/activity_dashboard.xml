@@ -8,21 +8,25 @@
     tools:context=".DashboardActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_marginTop="42dp"
+
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/dashboard_background"
         app:elevation="0dp">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/color_primary"/>
         <com.google.android.material.appbar.MaterialToolbar
+            android:background="@color/white"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="@string/dashboard_title"
+            app:titleCentered="true"
             app:titleTextColor="@color/dashboard_text_primary"
             app:navigationIcon="@drawable/ic_user_profile_placeholder"
-            app:navigationIconTint="@color/dashboard_text_primary"
             app:menu="@menu/dashboard_toolbar_menu" />
 
     </com.google.android.material.appbar.AppBarLayout>

@@ -77,8 +77,11 @@ dependencies {
 
     // ML Kit Image Labeling
     implementation(libs.mlkit.image.labeling)
-    implementation("androidx.navigation:navigation-fragment:2.9.4")
-    implementation("androidx.navigation:navigation-ui:2.9.4")
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     // Room Persistence Library
     implementation(libs.androidx.room.runtime) // Assuming libs.androidx.room.runtime is defined

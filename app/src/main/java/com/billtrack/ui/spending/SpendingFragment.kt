@@ -1,6 +1,7 @@
 package com.billtrack.ui.spending
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.billtrack.BillCaptureActivity
 import com.billtrack.R
 import com.billtrack.databinding.FragmentSpendingBinding
 import java.text.SimpleDateFormat
@@ -91,8 +93,7 @@ class SpendingFragment : Fragment() {
         }
 
         binding.captureBillImageButton.setOnClickListener {
-            Toast.makeText(requireContext(), "Capture Bill Image clicked", Toast.LENGTH_SHORT).show()
-            // TODO: Implement capture bill image functionality (e.g., navigate to BillCaptureActivity)
+            startActivity(Intent(requireContext(), BillCaptureActivity::class.java));
         }
     }
 

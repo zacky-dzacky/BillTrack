@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.billtrack.data.local.dao.BudgetGoalDao // Added import
 import com.billtrack.data.local.dao.ExpenseDao
+import com.billtrack.data.local.model.BudgetGoal // Added import
 import com.billtrack.data.local.model.ExpenseRecord
 
-@Database(entities = [ExpenseRecord::class], version = 1, exportSchema = false)
+@Database(entities = [ExpenseRecord::class, BudgetGoal::class], version = 2, exportSchema = false) // Added BudgetGoal and incremented version
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun expenseDao(): ExpenseDao
+    abstract fun budgetGoalDao(): BudgetGoalDao // Added DAO accessor
 
     companion object {
         @Volatile
@@ -23,8 +26,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "billtrack_database" // Name of the database file
                 )
-                // Optional: Add migrations if you change schema later
-                // .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
+                .fallbackToDestructiveMigration() // Added fallback migration strategy
                 .build()
                 INSTANCE = instance
                 instance

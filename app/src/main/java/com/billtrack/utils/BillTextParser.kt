@@ -1,6 +1,7 @@
 package com.billtrack.utils
 
 import android.util.Log
+import java.text.NumberFormat
 import java.util.Locale
 
 object BillTextParser {
@@ -148,5 +149,43 @@ object BillTextParser {
             RegexOption.COMMENTS // Allows comments in the regex pattern for readability
         )
         return monetaryRegex.matches(numString)
+    }
+
+    fun convertFormattedStringToInt(input: String): Double? {
+        // A null check for the input string is a good practice, although the function
+        // signature with a non-nullable String already prevents this in Kotlin.
+        if (input.isEmpty()) {
+            return null
+        }
+
+        // First, remove all commas and periods from the string.
+        // This is a simple but effective way to handle various formats.
+        val cleanedString = input.replace(",", "").replace(".", "")
+
+        // Use a try-catch block to handle potential NumberFormatException
+        // which occurs if the cleaned string is not a valid number.
+        return try {
+            // Attempt to convert the cleaned string to an integer.
+            cleanedString.toDouble()
+        } catch (e: NumberFormatException) {
+            // If the conversion fails, print an error message and return null.
+            println("Error: The string \"$input\" could not be converted to an integer.")
+            null
+        }
+    }
+
+    /**
+     * Formats an integer into a string with a thousands separator.
+     * For example, 60000 will be converted to "60.000" based on the specified locale.
+     *
+     * @param number The integer to format.
+     * @return The formatted string.
+     */
+    fun formatNumberWithSeparator(number: Double): String {
+        // We use a Locale that uses a period as the thousands separator,
+        // which is common in many parts of the world.
+        val locale = Locale.getDefault()
+        val numberFormat = NumberFormat.getNumberInstance(locale)
+        return "Rp ${numberFormat.format(number)}"
     }
 }

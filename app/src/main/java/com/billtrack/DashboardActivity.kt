@@ -1,8 +1,11 @@
 package com.billtrack
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.view.MenuItem
+import android.transition.Transition
 import android.widget.Toast
+import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -11,6 +14,10 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.billtrack.databinding.ActivityDashboardBinding
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -23,7 +30,26 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar!!.hide()
-//        setSupportActionBar(binding.toolbar) // Set the MaterialToolbar as the ActionBar
+
+        val googleInfo = GoogleSignIn.getLastSignedInAccount(this)
+
+        if (googleInfo?.photoUrl != null) {
+            Glide.with(this)
+                .load(googleInfo.photoUrl)
+                .circleCrop()
+                .into(object : CustomTarget<Drawable?>() {
+                    override fun onResourceReady(
+                        resource: Drawable,
+                        transition: com.bumptech.glide.request.transition.Transition<in Drawable?>?
+                    ) {
+                        binding.toolbar.navigationIcon = resource
+                    }
+
+                    override fun onLoadCleared(@Nullable placeholder: Drawable?) {
+                        // This is called if the target is cleared (e.g., activity destroyed)
+                    }
+                })
+        }
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment

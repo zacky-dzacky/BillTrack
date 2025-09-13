@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dashboard_background"
     android:padding="16dp"
+    android:scrollbars="none"
     tools:context=".ui.goals.GoalsFragment">
 
     <LinearLayout

@@ -13,6 +13,7 @@ constraintlayout = "2.1.4"
 imageGenerator = "16.0.0-beta01"
 mlkitGenAI = "1.0.0-beta1"
 kotlinxCoroutinesPlayServices = "1.10.2"
+navigationFragment = "2.9.4"
 retrofit = "3.0.0"
 cameraX = "1.4.2"
 mlkitTextRecognition = "16.0.1"
@@ -21,6 +22,8 @@ ksp = "2.2.0-2.0.2"
 room = "2.7.2"
 
 [libraries]
+androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigationFragment" }
+androidx-navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigationFragment" }
 firebase-auth = { module = "com.google.firebase:firebase-auth" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 mlkit-genai-image-description = {group = "com.google.mlkit", name = "genai-image-description", version.ref = "mlkitGenAI"}

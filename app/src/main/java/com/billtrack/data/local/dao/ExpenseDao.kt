@@ -19,6 +19,9 @@ interface ExpenseDao {
     @Query("SELECT * FROM expense_records WHERE id = :id")
     suspend fun getExpenseById(id: Int): ExpenseRecord?
 
+    @Query("SELECT * FROM expense_records")
+    suspend fun getAllTotalExpenses(): List<ExpenseRecord>
+
     // You can add other methods here later, e.g.:
     // @Query("DELETE FROM expense_records WHERE id = :id")
     // suspend fun deleteExpenseById(id: Int)
