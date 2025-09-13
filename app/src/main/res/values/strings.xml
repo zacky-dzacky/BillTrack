@@ -15,4 +15,66 @@
     <string name="login_google_button_text">Continue with Google</string>
     <string name="login_footer_agreement">By continuing, you agree to our <font color="#00796B">Terms of Service</font> and <font color="#00796B">Privacy Policy</font>.</string>
 
+    <!-- Dashboard Screen Strings -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_overview_title">Overview</string>
+    <string name="dashboard_income_label">Income</string>
+    <string name="dashboard_expenses_label">Expenses</string>
+    <string name="dashboard_budget_goals_title">Budget Goals</string>
+    <string name="dashboard_spending_patterns_title">Spending Patterns</string>
+    <string name="dashboard_spending_by_category_label">Spending by Category</string>
+
+    <!-- Example/Placeholder Strings for Dashboard -->
+    <string name="dashboard_example_income_value">$5,200</string>
+    <string name="dashboard_example_expense_value">$2,850</string>
+    <string name="dashboard_goal_travel_fund">Travel Fund</string>
+    <string name="dashboard_goal_travel_fund_progress">$4225 / $6500</string>
+    <string name="dashboard_goal_home_renovation">Home Renovation</string>
+    <string name="dashboard_goal_home_renovation_progress">$6400 / $8000</string>
+    <string name="dashboard_goal_emergency_savings">Emergency Savings</string>
+    <string name="dashboard_goal_emergency_savings_progress">$1600 / $4000</string>
+    <string name="dashboard_category_food">Food</string>
+    <string name="dashboard_category_transport">Transport</string>
+    <string name="dashboard_category_entertain">Entertain.</string>
+    <string name="dashboard_category_shopping">Shopping</string>
+    <string name="dashboard_category_utilities">Utilities</string>
+
+    <!-- Log Expense (SpendingFragment) Strings -->
+    <string name="log_expense_fragment_title">Log Expense</string>
+    <string name="log_expense_hint_amount">Amount</string>
+    <string name="log_expense_hint_date">mm/dd/yyyy</string>
+    <string name="log_expense_hint_description">Description</string>
+    <string name="log_expense_hint_select_category">Select Category</string>
+    <string name="log_expense_button_add_category">Add New Category</string>
+    <string name="log_expense_button_capture_bill">Capture Bill Image</string>
+
+    <!-- Budget Goals (GoalsFragment) Strings -->
+    <string name="goals_fragment_title">Budget Goals</string>
+    <string name="goals_create_new_goal_title">Create New Goal</string>
+    <string name="goals_hint_goal_name">Goal Name</string>
+    <string name="goals_hint_amount">Amount</string>
+    <string name="goals_hint_category">Category</string>
+    <string name="goals_button_set_goal">Set Goal</string>
+    <string name="goals_current_goals_title">Current Goals</string>
+    <string name="goals_example_groceries">Groceries</string>
+    <string name="goals_example_groceries_progress">$250 / $500</string>
+    <string name="goals_example_groceries_percentage">50%</string>
+    <string name="goals_example_entertainment">Entertainment</string>
+    <string name="goals_example_entertainment_progress">$120 / $200</string>
+    <string name="goals_example_entertainment_percentage">60%</string>
+    <string name="goals_example_transportation">Transportation</string>
+    <string name="goals_example_transportation_progress">$95 / $100</string>
+    <string name="goals_example_transportation_percentage">95%</string>
+
+    <!-- Report (Spending Patterns) Fragment Strings -->
+    <string name="report_fragment_title">Spending Patterns</string>
+    <string name="report_tab_categories">Categories</string>
+    <string name="report_tab_time">Time</string>
+    <string name="report_tab_merchants">Merchants</string>
+    <string name="report_spending_by_category_title">Spending by Category</string>
+    <string name="report_example_total_spending">$2,450.00</string>
+    <string name="report_spending_period">This Month</string>
+    <string name="report_filter_category_label">Category</string>
+    <string name="report_filter_date_range_label">Date Range</string>
+
 </resources>

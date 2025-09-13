@@ -77,6 +77,8 @@ dependencies {
 
     // ML Kit Image Labeling
     implementation(libs.mlkit.image.labeling)
+    implementation("androidx.navigation:navigation-fragment:2.9.4")
+    implementation("androidx.navigation:navigation-ui:2.9.4")
 
     // Room Persistence Library
     implementation(libs.androidx.room.runtime) // Assuming libs.androidx.room.runtime is defined

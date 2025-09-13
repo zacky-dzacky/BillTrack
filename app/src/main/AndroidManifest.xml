@@ -23,7 +23,7 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -36,11 +36,12 @@
             android:theme="@style/NoActionBar" />
 
         <activity
-            android:name=".BillCaptureActivity"
-            android:exported="false" />
+            android:name=".DashboardActivity"
+            android:exported="false"
+            android:theme="@style/DashboardTheme" />
 
         <activity
-            android:name=".OCRActivity"
+            android:name=".BillCaptureActivity"
             android:exported="false" />
 
         <activity
@@ -51,10 +52,10 @@
             android:name=".OCRActivity" 
             android:exported="false" />
         <activity
-            android:name=".HistoryListActivity"
+            android:name="com.billtrack.HistoryListActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryDetailActivity"
+            android:name="com.billtrack.HistoryDetailActivity"
             android:exported="false" />
 
         <provider

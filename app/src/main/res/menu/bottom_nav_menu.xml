@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_bottom_dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/navigation_spending"
+        android:icon="@drawable/ic_bottom_spending"
+        android:title="Spending" />
+    <item
+        android:id="@+id/navigation_goals"
+        android:icon="@drawable/ic_bottom_goals"
+        android:title="Goals" />
+    <item
+        android:id="@+id/navigation_report"
+        android:icon="@drawable/ic_bottom_report"
+        android:title="Report" />
+    <item
+        android:id="@+id/navigation_income"
+        android:icon="@drawable/ic_bottom_income"
+        android:title="Income" />
+</menu>

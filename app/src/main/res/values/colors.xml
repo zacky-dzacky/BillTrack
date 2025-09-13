@@ -21,4 +21,44 @@
     <color name="login_text_secondary_color">#546E7A</color>
     <color name="login_link_color">#00796B</color>
 
+    <!-- Dashboard Screen Colors -->
+    <color name="dashboard_background">#F5F5F5</color>
+    <color name="dashboard_card_background">@color/white</color>
+    <color name="dashboard_text_primary">#212121</color>
+    <color name="dashboard_text_secondary">#757575</color>
+    <color name="dashboard_text_tertiary">#BDBDBD</color>
+    <color name="dashboard_income_color">#4CAF50</color>
+    <color name="dashboard_expense_color">#F44336</color>
+    <color name="dashboard_progress_bar_color">#4DB6AC</color>
+    <color name="dashboard_settings_icon_color">#424242</color>
+    <color name="dashboard_card_stroke_color">#EEEEEE</color>
+    <color name="dashboard_bottom_nav_active_tint">#00796B</color>
+    <color name="dashboard_bottom_nav_inactive_tint">#757575</color>
+
+    <!-- Log Expense (SpendingFragment) Colors -->
+    <color name="log_expense_input_field_background">#FAFAFA</color>
+    <color name="log_expense_capture_button_background">#26A69A</color>
+    <color name="log_expense_add_category_button_stroke_color">@color/login_icon_tint_teal</color>
+    <color name="log_expense_add_category_button_text_color">@color/login_icon_tint_teal</color>
+    <color name="log_expense_icon_tint_color">@color/login_icon_tint_teal</color>
+    <color name="log_expense_hint_text_color">@color/dashboard_text_secondary</color>
+    <color name="log_expense_input_text_color">@color/dashboard_text_primary</color>
+    <color name="log_expense_dropdown_arrow_color">@color/dashboard_text_secondary</color>
+    <color name="log_expense_toolbar_icon_tint">@color/dashboard_text_primary</color>
+
+    <!-- Budget Goals (GoalsFragment) Colors -->
+    <color name="goal_progress_groceries">#50C878</color>
+    <color name="goal_progress_entertainment">#FFA500</color>
+    <color name="goal_progress_transportation">#FF6347</color>
+    <color name="goal_set_button_background">@color/log_expense_capture_button_background</color>
+    <color name="goal_percentage_text_color_default">@color/dashboard_text_secondary</color>
+    <color name="goal_item_background">@color/dashboard_card_background</color>
+    <color name="goal_create_card_background">@color/dashboard_card_background</color>
+
+    <!-- Report (Spending Patterns) Fragment Colors -->
+    <color name="report_tab_group_background_color">#EEEEEE</color>
+    <color name="report_filter_dropdown_background_color">#EFEFEF</color>
+    <color name="report_tab_selected_text_color">@color/dashboard_text_primary</color>
+    <color name="report_tab_unselected_text_color">@color/dashboard_text_secondary</color>
+
 </resources>
